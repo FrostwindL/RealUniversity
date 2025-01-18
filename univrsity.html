@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Excellence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px 10%;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #004080;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #002244;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RealUniversity API</h1>
+        <p>RESTful api for pre registration</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#HowTo">How To</a>
+        <a href="#endpoints">Endpoints</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p> Pre-Registration for enrollment as well as easilly accessible list of offered Courses and Subjects </p>
+        </section>
+        <section id="HowTo" class="section">
+            <h2>RealUniversity API</h2>
+            <p>This API allows your to :</p>
+            <ul>
+                <li>Pre Register your credentials and course</li>
+                <li>See the full list of available courses and subjects</li>
+                <li>Check specific courses and subject</li>
+            </ul>
+        </section>
+        <section id="endpoints" class="section">
+            <h2>Endpoints</h2><br>
+            <p>The API is available at https:/RealUniversity</p>
+            <h3>Status</h3><br>
+            <h4>GET /test</h4>
+            <p>Check the API status</p><br>
+
+            <h3>List of courses</h3>
+            <h4>GET /courses</h4>
+            <p>Returns a list of available courses</p><br>
+
+            <h3>Get a single course</h3>
+            <h4>GET /courses/:id</h4>
+            <p>Returns detailed info on a specific course</p><br>
+
+            <h3>List of students</h3>
+            <h4>GET /students</h4>
+            <p>Returns a list of available courses</p><br>
+
+            <h3>Submit pre enrollment </h3>
+            <h4>POST /students</h4>
+            <p>Allows you to submit a pre enrollment entry</p>
+            <p>The request body needs to be in JSON format including the following properties</p>
+            <ul>
+                <li>name - String - Required</li>
+                <li>course_id - Integer - Required</li>
+                <li>year - String - Required</li>
+                <li>contact - String - Required</li>
+                <li>email - String - Required</li>
+            </ul>
+            <p>Example</p>
+            <p>Post /students/ <br> { <br> "name" : "Lastname Firstname" <br> "course_id" : 1 <br> "year" : "2nd" <br> "contact" : "1234567890" <br> "email" : "Enrolling_Student@gmail.com"</p><br>
+
+            <h3>List of subjects</h3>
+            <h4>GET /subjects</h4>
+            <p>Returns a list of available subjects</p><br>
+
+            <h3>Get a single subject</h3>
+            <h4>GET /subjects/:id</h4>
+            <p>Returns detailed info on a specific subject</p><br>
+
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 RealUniversity. All rights reserved.</p>
+    </footer>
+</body>
+</html>
