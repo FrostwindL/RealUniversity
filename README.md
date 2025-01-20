@@ -1,15 +1,17 @@
-SIA101 Final output
+# SIA101 Final output #
 Submitted by Team Stwopeed (Kalaw Darcy, Omana Carlo
 
 RealUniversity Online Pre-Registration
 
 The RealUniversity API allows users to submit pre registration and view available course subjects and registered students.
 
-Base URL https:/RealUniversity
+Site URL 'https://frostwindl.github.io/'
+Base URL 'https:/RealUniversity'
 Authentication : none required for this API.
 
-Endpoints
-1. Get list of available Courses
+## Endpoints ##
+
+### Get list of available Courses ###
     • URL: /courses
     • Method: GET
 Example Response
@@ -19,11 +21,11 @@ Example Response
 	“fullname”: “Bachelor of Science in Computer Science”
 }
 
-2. Get specific Course
+### Get specific Course ###
     • URL: /courses/{id}
     • Method: GET
 
-3. Get list of available Subjects
+### Get list of available Subjects ###
     • URL: /subjects
     • Method: GET
 Example Response
@@ -41,11 +43,11 @@ Example Response
 	“units”: “3”
 }
 
-4. Get specific Subject
+### Get specific Subject ###
     • URL: /subjects/{id}
     • Method: GET
 
-5. Submit pre enrollement
+### Submit pre enrollement ###
     • URL: /students
     • Method: POST
 Request Body
@@ -57,6 +59,6 @@ Request Body
 	“email”: “Enrolling_Student@gmail.com”
 }
 
-6. Get list of students
+### Get list of students ###
     • URL: /students
     • Method: GET
